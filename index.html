@@ -5,8 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--Fonts-->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    
+    <!--Modern Normalize-->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
+    
+    <!--Custom styles-->
+    
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <h1>Привіт</h1>
+    <header>
+        <div class="container header-container">
+
+            <nav class="nav">
+                <ul class="nav-list list">
+                    <li><a class="header-link link" href="">How It Works</a></li>
+                    <li><a class="header-link link" href="">Fruits</a></li>
+                    <li><a class="header-link link" href="">Contacts</a></li>
+                </ul>
+            </nav>
+
+            <svg class="logo-icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-logo-icon"></use>
+            </svg>
+            <a class="header-logo logo link" href="./index.html">fresh harvest box</a>
+            
+            <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="menu-toggle-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-burger-menu"></use>
+                </svg>
+            </button>
+
+            <a class="shopping-cart" id=""> 
+            <svg class="header-cart" width="28" height="28">
+                <use href="./images/icons.svg#icon-cart-icon"></use>
+            </svg>
+            </a>
+            
+        </div>
+    </header>
 </body>
 </html>
