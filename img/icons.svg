@@ -14,8 +14,7 @@
       <path stroke-width="2.6667" stroke-miterlimit="4" stroke-linecap="round" stroke-linejoin="round" d="M24 8l-16 16"></path>
       <path stroke-width="2.6667" stroke-miterlimit="4" stroke-linecap="round" stroke-linejoin="round" d="M8 8l16 16"></path>
     </symbol>
-    <svg aria-hidden="true" style="position:absolute;width:0;height:0" xmlns="http://www.w3.org/2000/svg" overflow="hidden">
-  <defs>
+    
     <!-- Arrow -->
     <symbol id="arrow" viewBox="0 0 14 14">
         <path d="M14 2.074 11.926 0v10.37L1.556 0 0 1.556l10.37 10.37H0L2.074 14H14V2.074Z"/>
@@ -56,8 +55,6 @@
     <symbol id="checked" viewBox="0 0 8 8">
         <path d="M18 6 6 18M6 6l12 12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
-  </defs>
-</svg>
   </defs>
 </svg>
 
