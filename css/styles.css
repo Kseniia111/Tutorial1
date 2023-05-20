@@ -25,6 +25,12 @@ header {
     color: currentColor;
 }
 
+button {
+    font-family: inherit;
+    color: currentColor;
+    cursor: pointer;
+}
+
 .container {
     min-width: 320px;
     max-width: 375px;
@@ -50,8 +56,7 @@ header {
 
 .header-container {
     height: 50px;
-    align-items: baseline;
-
+    align-items: center;
     display: flex;
 }
 
@@ -114,12 +119,77 @@ header {
     margin: 17px 0;  
 }
 
-.header-cart {
-   margin-top: 11px;
-   
-   fill: #AE1332;
+.shopping-cart {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
 
 }
+
+.header-cart {
+    justify-content: center;
+    align-items: center;
+    fill: #AE1332;
+
+}
+/*modal styles*/
+.backdrop {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 250ms, visibility 250ms;
+    background-color: rgba(46, 47, 66, 0.4);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    width: 400px;
+    min-height: 520px;
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 427px) {
+    .modal {
+        width: 308px;
+    }
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.1);
+}
+
+.modal-close-btn {
+    display: flex;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 /*Mobile menu*/
 .menu-toggle {
     min-height: 40px;
@@ -131,6 +201,7 @@ header {
     margin: 0;
     padding: 0;
     background-color: transparent;
+    color: #AE1332;
     cursor: pointer;
     border: none;
     border-radius: 50%;
@@ -141,6 +212,12 @@ header {
     .menu-toggle {
         display: none;
     }
+}
+.mob-close-icon {
+    justify-content: center;
+    align-items: center;
+    color: #AE1332;
+    fill: currentColor;
 }
 
 .menu-toggle:hover,
@@ -172,13 +249,13 @@ header {
     right: 16px;
     color: #fff;
 }
-
+/*
 .mobile-menu {
     padding: 0;
     margin: 0;
     list-style: none;
 }
-
+*/
 .mobile-menu .link {
     display: block;
     padding: 10px;
@@ -192,6 +269,7 @@ header {
 
 .mobile-top {
     position: absolute;
+    align-items: center;
     top: 0;
     left: 0;
     background-color: #fff;
@@ -206,7 +284,9 @@ header {
     gap: 16px;
 }
 .mobile-cart {
+    border-radius: 50%;
     color: #fff;
+    background-color: #AE1332;
 }
 .mobile-cart-icon {
     fill: currentColor;
